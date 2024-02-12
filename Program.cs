@@ -12,13 +12,13 @@ class Program
         DateTime fecha = DateTime.Now;
         Console.WriteLine("Fecha hoy");
         Console.WriteLine(fecha);
-        int numeroRestaAños = numeroRamdom.Next(0, 4);
-        DateTime fechaModificada = fecha.AddDays(1).AddMonths(-24).AddYears(-numeroRestaAños);
+        int restaAños = numeroRamdom.Next(0, 4);
+        DateTime fechaFinal = fecha.AddDays(1).AddMonths(-24).AddYears(-restaAños);
         Console.WriteLine("Resultado");
-        Console.WriteLine(fechaModificada);
+        Console.WriteLine(fechaFinal);
         Console.WriteLine("Comparación de fechas");
-        int comparFechas = fechaModificada.CompareTo(fecha);
-        if (comparFechas > 0)
+        int compararFechas = fechaFinal.CompareTo(fecha);
+        if (compararFechas > 0)
         {
             Console.WriteLine("El hoy es mas pequeño");
         }
